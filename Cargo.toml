@@ -12,7 +12,9 @@ readme = "README.md"
 license = "MIT"
 keywords = ["keyboard", "mouse", "gamepad", "hid"]
 
-[target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winuser", "basetsd", "hidpi", "winnt", "libloaderapi", "fileapi", "hidsdi", "handleapi"] }
+[dependencies]
 enum-primitive-derive = "^0.1"
 num-traits = "^0.1"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "basetsd", "hidpi", "winnt", "libloaderapi", "fileapi", "hidsdi", "handleapi"] }
